@@ -68,3 +68,16 @@
     text-wrap: balance;
   }
 }
+
+/* Grayscale-to-color project imagery only for devices with real hover (mouse/trackpad).
+   Touch devices never fire :hover, so they get full color always instead of being
+   permanently desaturated with no way to reveal it. */
+@media (hover: hover) and (pointer: fine) {
+  .project-thumb {
+    filter: grayscale(1);
+  }
+
+  .group:hover .project-thumb {
+    filter: grayscale(0);
+  }
+}

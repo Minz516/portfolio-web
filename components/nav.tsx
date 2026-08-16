@@ -1,9 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { navLinks } from "@/data/site";
+import { navLinks, site } from "@/data/site";
 
 export function Nav() {
   const [open, setOpen] = useState(false);
@@ -14,9 +15,18 @@ export function Nav() {
         <nav className="mx-auto flex h-16 max-w-[1280px] items-center justify-between px-4 sm:px-6 lg:h-[72px] lg:px-8">
           <a
             href="#top"
-            className="font-mono text-sm font-medium tracking-[0.08em] text-on-surface transition-colors hover:text-primary"
+            className="group flex items-center gap-2.5 font-mono text-sm font-medium tracking-[0.08em] text-on-surface transition-colors hover:text-primary"
           >
-            TRAN_HOANG_MINH
+            <span className="relative h-8 w-8 shrink-0 overflow-hidden rounded-full border border-outline-variant/50 transition-colors group-hover:border-primary/60">
+              <Image
+                src={site.avatar.square.src}
+                alt={site.avatar.square.alt}
+                fill
+                sizes="32px"
+                className="object-cover"
+              />
+            </span>
+            TRAN HOANG MINH
           </a>
 
           <div className="hidden items-center gap-8 lg:flex">

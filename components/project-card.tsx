@@ -53,13 +53,15 @@ export function ProjectCard({ project }: { project: Project }) {
             {project.description}
           </p>
 
-          <p
-            className={`mt-4 font-mono text-xs uppercase tracking-[0.08em] ${
-              project.resultHighlight ? "text-tertiary" : "text-secondary"
-            }`}
-          >
-            {project.result}
-          </p>
+          {project.result && (
+            <p
+              className={`mt-4 font-mono text-xs uppercase tracking-[0.08em] ${
+                project.resultHighlight ? "text-tertiary" : "text-secondary"
+              }`}
+            >
+              {project.result}
+            </p>
+          )}
 
           <ul className={`mt-5 flex flex-wrap gap-2 ${isFeature ? "justify-center" : ""}`}>
             {project.tags.map((tag) => (

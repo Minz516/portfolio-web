@@ -3,7 +3,7 @@
 import { motion, useReducedMotion, type Variants } from "framer-motion";
 import { Github, Linkedin, Mail } from "lucide-react";
 import { site } from "@/data/site";
-import { TrackingFrame } from "@/components/tracking-frame";
+import { HeroPortrait } from "@/components/hero-portrait";
 
 const socials = [
   { label: "GitHub", href: site.github.url, icon: Github },
@@ -95,7 +95,7 @@ export function Hero() {
         </motion.div>
 
         <div className="hidden items-center justify-center lg:col-span-5 lg:flex">
-          <TrackingFrame />
+          <HeroPortrait />
         </div>
       </div>
     </section>

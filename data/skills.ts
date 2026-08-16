@@ -3,7 +3,7 @@
 
 export type SkillCategory = {
   title: string;
-  icon: "Code2" | "Layers" | "Server" | "Database" | "Wrench" | "Users";
+  icon: "Code2" | "Layers" | "Server" | "Database" | "Wrench" | "Users" | "Binary" | "Bot";
   items: string[];
   span: 1 | 2 | 4;
 };
@@ -19,6 +19,35 @@ export const skillCategories: SkillCategory[] = [
     title: "Frameworks & Libraries",
     icon: "Layers",
     items: ["React", "Supabase", "Tailwind", "Bootstrap"],
+    span: 2,
+  },
+  {
+    title: "Data Structures & Algorithms",
+    icon: "Binary",
+    items: [
+      "Data Structures",
+      "Sliding Window",
+      "Two Pointers",
+      "Fast & Slow Pointers",
+      "Min-Heap / Max-Heap",
+      "Binary Search",
+      "Binary Search Tree",
+      "Dijkstra's Algorithm",
+      "A* Search",
+      "Theta* Search",
+      "Monte Carlo Tree Search (MCTS)",
+    ],
+    span: 4,
+  },
+  {
+    title: "Game AI",
+    icon: "Bot",
+    items: [
+      "Steering Behaviors",
+      "Finite State Machines (FSM)",
+      "Reinforcement Learning",
+      "Generative AI",
+    ],
     span: 2,
   },
   {

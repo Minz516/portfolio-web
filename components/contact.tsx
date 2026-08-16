@@ -10,7 +10,7 @@ const socials = [
 
 export function Contact() {
   return (
-    <section id="contact" className="border-t border-outline-variant/30 py-20 lg:py-40">
+    <section id="contact" className="border-t border-outline-variant/30 pt-20 pb-16 lg:pt-40 lg:pb-24">
       <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
         <Reveal>
           <h2 className="max-w-2xl text-balance font-display text-3xl font-semibold leading-[1.2] tracking-[-0.02em] text-on-surface sm:text-4xl">

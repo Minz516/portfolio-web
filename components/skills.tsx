@@ -1,4 +1,32 @@
-import { Code2, Layers, Server, Database, Wrench, Users, type LucideIcon } from "lucide-react";
+import {
+  Code2,
+  Layers,
+  Server,
+  Database,
+  Wrench,
+  Users,
+  Binary,
+  Bot,
+  type LucideIcon,
+} from "lucide-react";
+import type { IconType } from "react-icons";
+import {
+  SiPython,
+  SiHtml5,
+  SiCss,
+  SiJavascript,
+  SiReact,
+  SiSupabase,
+  SiTailwindcss,
+  SiBootstrap,
+  SiPostgresql,
+  SiMongodb,
+  SiGit,
+} from "react-icons/si";
+import { DiJava } from "react-icons/di";
+import { TbBrandCpp } from "react-icons/tb";
+import { VscVscode } from "react-icons/vsc";
+import { FaFileExcel, FaFileWord, FaFilePowerpoint } from "react-icons/fa6";
 import { skillCategories, type SkillCategory } from "@/data/skills";
 import { Reveal } from "@/components/reveal";
 
@@ -9,6 +37,32 @@ const icons: Record<SkillCategory["icon"], LucideIcon> = {
   Database,
   Wrench,
   Users,
+  Binary,
+  Bot,
+};
+
+// Per-item brand marks for Languages, Frameworks & Libraries, Databases, and Tools.
+// Sourced across Simple Icons / Devicon / Tabler / Codicons / Font Awesome (all bundled
+// in react-icons) since no single set covers every brand here (Java, VS Code, and the
+// Microsoft Office apps have no official mark in Simple Icons for trademark reasons).
+const techIcons: Record<string, IconType> = {
+  Python: SiPython,
+  Java: DiJava,
+  "C/C++": TbBrandCpp,
+  HTML: SiHtml5,
+  CSS: SiCss,
+  JavaScript: SiJavascript,
+  React: SiReact,
+  Supabase: SiSupabase,
+  Tailwind: SiTailwindcss,
+  Bootstrap: SiBootstrap,
+  PostgreSQL: SiPostgresql,
+  MongoDB: SiMongodb,
+  Git: SiGit,
+  "VS Code": VscVscode,
+  Excel: FaFileExcel,
+  Word: FaFileWord,
+  PowerPoint: FaFilePowerpoint,
 };
 
 const spanClass: Record<SkillCategory["span"], string> = {
@@ -19,7 +73,7 @@ const spanClass: Record<SkillCategory["span"], string> = {
 
 export function Skills() {
   return (
-    <section id="skills" className="border-t border-outline-variant/30 py-20 lg:py-40">
+    <section id="skills" className="border-t border-outline-variant/30 pt-20 lg:pt-40">
       <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
         <Reveal>
           <h2 className="font-display text-3xl font-semibold tracking-[-0.02em] text-on-surface sm:text-4xl">
@@ -42,14 +96,18 @@ export function Skills() {
                     {category.title}
                   </h3>
                   <ul className="mt-4 flex flex-wrap gap-2">
-                    {category.items.map((item) => (
-                      <li
-                        key={item}
-                        className="rounded bg-surface-high px-2.5 py-1 font-mono text-[11px] uppercase tracking-[0.08em] text-secondary"
-                      >
-                        {item}
-                      </li>
-                    ))}
+                    {category.items.map((item) => {
+                      const TechIcon = techIcons[item];
+                      return (
+                        <li
+                          key={item}
+                          className="flex items-center gap-1.5 rounded bg-surface-high px-2.5 py-1 font-mono text-[11px] uppercase tracking-[0.08em] text-secondary"
+                        >
+                          {TechIcon && <TechIcon className="shrink-0" size={12} />}
+                          {item}
+                        </li>
+                      );
+                    })}
                   </ul>
                 </div>
               </Reveal>

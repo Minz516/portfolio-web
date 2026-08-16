@@ -8,9 +8,9 @@ export const site = {
   eyebrow: "Software Engineering Student · RMIT University",
   heroHeadline: "Engineering the bridge to immersive reality.",
   heroSubtext:
-    "Software Engineering student at RMIT building a foundation in OOP and algorithms, with eyes on AR/VR research ahead.",
+    "Software Engineering student at RMIT building a foundation in OOP and algorithms.",
   aboutParagraphs: [
-    "Tran Hoang Minh believes technology is the catalyst for turning the impossible into reality. The current focus is building a robust technical foundation through Object-Oriented Programming and complex algorithms, with a growth mindset that stays eager for new technical challenges.",
+    "I believes technology is the catalyst for turning the impossible into reality. The current focus is building a robust technical foundation through Object-Oriented Programming and complex algorithms, with a growth mindset that stays eager for new technical challenges.",
     "The long-term vision reaches further: researching and developing AR/VR and immersive technologies that bridge the gap between virtual experiences and the physical world.",
   ],
   location: "Ho Chi Minh City, Vietnam",
@@ -24,6 +24,14 @@ export const site = {
   linkedin: {
     label: "linkedin.com/in/hoang-minh-897487307",
     url: "https://linkedin.com/in/hoang-minh-897487307",
+  },
+  avatar: {
+    hero: { src: "/avatar/minh_photo_transparent_v2.png", alt: "" },
+    about: {
+      src: "/avatar/IMG_5705.jpg",
+      alt: "Tran Hoang Minh working on his laptop in an office setting",
+    },
+    square: { src: "/avatar/minh_photo_avatar_square.png", alt: "" },
   },
   education: {
     school: "RMIT University",
@@ -43,4 +51,5 @@ export const navLinks = [
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
   { label: "Honors", href: "#honors" },
+  { label: "Certificates", href: "#certificates" },
 ] as const;
