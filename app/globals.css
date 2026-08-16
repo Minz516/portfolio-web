@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: var(--font-lexend), sans-serif;
+  --font-sans: var(--font-inter), sans-serif;
+  --font-mono: var(--font-jetbrains-mono), monospace;
+
+  --color-bg: #131313;
+  --color-bg-lowest: #0e0e0e;
+  --color-surface-low: #1c1b1b;
+  --color-surface: #20201f;
+  --color-surface-high: #2a2a2a;
+  --color-surface-highest: #353535;
+  --color-surface-bright: #393939;
+
+  --color-on-surface: #e5e2e1;
+  --color-on-surface-variant: #bac9c8;
+
+  --color-outline: #859493;
+  --color-outline-variant: #3c4949;
+
+  --color-primary: #53ebe8;
+  --color-on-primary: #003736;
+  --color-primary-container: #25cfcc;
+
+  --color-secondary: #dbc49c;
+  --color-on-secondary-container: #c8b28c;
+
+  --color-tertiary: #ffcda3;
+  --color-error: #ffb4ab;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-outline-variant);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-on-surface);
+  }
+
+  ::selection {
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
