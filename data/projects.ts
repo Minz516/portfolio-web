@@ -13,7 +13,9 @@ export type Project = {
   resultHighlight?: boolean; // true = the single tertiary-amber "1st place" moment
   tags: string[];
   link: string;
-  linkLabel: "GitHub Repo" | "Video";
+  linkLabel: "GitHub Repo" | "Video" | "Live Demo";
+  secondaryLink?: string;
+  secondaryLinkLabel?: "GitHub Repo" | "Video" | "Live Demo";
   image: string;
   imageAlt: string;
   layout: "split-right" | "split-left" | "feature";
@@ -31,6 +33,8 @@ export const projects: Project[] = [
     tags: ["Java", "PostgreSQL", "JPA"],
     link: "https://youtu.be/2EutT3HtLUg?si=jvOO5W0gYZ9LL92a",
     linkLabel: "Video",
+    secondaryLink: "https://github.com/RMIT-Vietnam-Teaching/assignment-2-build-a-backend-sgs-tut02-group2",
+    secondaryLinkLabel: "GitHub Repo",
     image: "/projects/eventx.png",
     imageAlt: "EventX event listing screen showing scheduled events with search and status filters",
     layout: "split-right",
@@ -62,6 +66,8 @@ export const projects: Project[] = [
     tags: ["Next.js", "Python", "Supabase"],
     link: "https://youtu.be/eWKLo_T5JiQ?si=g8Q9NXiIdm6XAPfX",
     linkLabel: "Video",
+    secondaryLink: "https://github.com/KhanhQNguyn/flowguard",
+    secondaryLinkLabel: "GitHub Repo",
     image: "/projects/flowguard.png",
     imageAlt: "FlowGuard mobile app mockups showing flood risk alerts overlaid on flooded street photography",
     layout: "feature",
@@ -90,8 +96,26 @@ export const projects: Project[] = [
     tags: ["React", "Node.js", "WebSocket"],
     link: "https://github.com/RMIT-Full-Stack-Development-2026A/Group1.git",
     linkLabel: "GitHub Repo",
+    secondaryLink: "https://tictactoang.vercel.app/",
+    secondaryLinkLabel: "Live Demo",
     image: "/projects/tictactoang.png",
     imageAlt: "TicTacToang landing page showing the game arena hero, board size and AI difficulty features, and a live match visualizer",
     layout: "split-left",
+  },
+  {
+    slug: "countdown",
+    title: "Countdown",
+    role: "Solo Fullstack Developer",
+    date: "2026",
+    description:
+      "A deadline and group-tracking app built solo out of a real personal need to manage overlapping coursework, featuring a live countdown dashboard, urgency-based color coding, and automatic recurring-deadline handling. Secure OAuth login and PostgreSQL Row Level Security enforce strict per-user data isolation, with serverless Supabase Edge Functions delivering daily deadline digests through a custom Discord bot. A collaborative Group Countdown mode adds shared timelines, invite-code joining, and per-member checklists.",
+    tags: ["Next.js", "TypeScript", "Supabase"],
+    link: "https://chronocount.vercel.app/",
+    linkLabel: "Live Demo",
+    secondaryLink: "https://github.com/Minz516/count-down",
+    secondaryLinkLabel: "GitHub Repo",
+    image: "/projects/countdown.png",
+    imageAlt: "Countdown app dashboard showing a live event countdown timer and a timeline of upcoming deadlines",
+    layout: "split-right",
   },
 ];

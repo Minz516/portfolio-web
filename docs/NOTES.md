@@ -11,6 +11,14 @@ Implementation notes for the portfolio site, following `docs/prompt.md`, `docs/m
 - **Content**: all copy in `/data` is sourced from `docs/prompt.md` and `docs/my_portfolio.pdf` (identical content in both). No facts were invented; the hero headline and about paragraphs are rewritten for tone, not pasted verbatim, per the brief.
 - **Dynamic OG/favicon images were removed.** `app/icon.tsx` and `app/opengraph-image.tsx` (built on `next/og`'s `ImageResponse`) were tried first, but `@vercel/og`'s font-loading step throws `TypeError: Invalid URL` when the project path contains a space (`D:\Portfolio Web\portfolio-web`), a known Windows-specific issue in that dependency. Replaced with a static `public/favicon.svg` monogram and plain Open Graph title/description metadata (no OG image). If the project is later moved to a path without spaces, the dynamic versions can be restored for a nicer social card.
 
+## Recent additions
+
+- **EventX and FlowGuard now also link to their GitHub repos** as a secondary link alongside their existing demo video (`data/projects.ts`): EventX → `github.com/RMIT-Vietnam-Teaching/assignment-2-build-a-backend-sgs-tut02-group2`, FlowGuard → `github.com/KhanhQNguyn/flowguard`. **TicTacToang now also links to its live demo** (`tictactoang.vercel.app`) as a secondary link alongside its existing GitHub repo. All three use the `secondaryLink`/`secondaryLinkLabel` fields added for the Countdown project below.
+
+- **Countdown project added** (`data/projects.ts`), 6th/newest card, layout `split-right` continuing the alternation. Role: Solo Fullstack Developer, 2026. Description compresses the three resume bullets (personal-need origin/tech stack, OAuth + RLS + Discord digest automation, collaborative Group Countdown mode) into one concise paragraph per your instruction, rather than listing all three verbatim. Screenshot supplied by you at `public/projects/countdown.png`.
+- **`Project` type extended with an optional `secondaryLink`/`secondaryLinkLabel`** (`data/projects.ts`, rendered in `components/project-card.tsx`) since Countdown has both a live demo and a GitHub repo, unlike every prior project's single link. Live Demo (`https://chronocount.vercel.app/`) is the primary link, GitHub Repo (`https://github.com/Minz516/count-down`) secondary — both render side by side on the card. Existing projects are unaffected (the field is optional and unset for them).
+- Projects section heading (`components/projects.tsx`) updated from "Five projects, five problem spaces." to "Six projects, six problem spaces."
+
 ## Placeholder content that needs your input
 
 - **EventX and FlowGuard now link to their demo videos** (YouTube) instead of the earlier `#` GitHub placeholder; both changed `linkLabel` from "GitHub Repo" to "Video" to match. **Floppy Bird and TicTacToang link to their real GitHub repos.** Railway Management System is the only project still on a `#` placeholder ("Video" label) — its real video URL wasn't supplied.

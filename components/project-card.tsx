@@ -74,17 +74,33 @@ export function ProjectCard({ project }: { project: Project }) {
             ))}
           </ul>
 
-          <a
-            href={project.link}
-            target={project.link !== "#" ? "_blank" : undefined}
-            rel={project.link !== "#" ? "noreferrer" : undefined}
-            className={`mt-6 inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-[0.08em] text-primary transition-colors hover:text-primary-container ${
+          <div
+            className={`mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 ${
               isFeature ? "justify-center" : ""
             }`}
           >
-            {project.linkLabel}
-            <ArrowUpRight size={14} strokeWidth={2} />
-          </a>
+            <a
+              href={project.link}
+              target={project.link !== "#" ? "_blank" : undefined}
+              rel={project.link !== "#" ? "noreferrer" : undefined}
+              className="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-[0.08em] text-primary transition-colors hover:text-primary-container"
+            >
+              {project.linkLabel}
+              <ArrowUpRight size={14} strokeWidth={2} />
+            </a>
+
+            {project.secondaryLink && (
+              <a
+                href={project.secondaryLink}
+                target={project.secondaryLink !== "#" ? "_blank" : undefined}
+                rel={project.secondaryLink !== "#" ? "noreferrer" : undefined}
+                className="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-[0.08em] text-primary transition-colors hover:text-primary-container"
+              >
+                {project.secondaryLinkLabel}
+                <ArrowUpRight size={14} strokeWidth={2} />
+              </a>
+            )}
+          </div>
         </div>
       </article>
     </Reveal>

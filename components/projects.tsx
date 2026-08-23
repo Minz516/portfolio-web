@@ -11,7 +11,7 @@ export function Projects() {
             Selected Work
           </p>
           <h2 className="mt-4 font-display text-3xl font-semibold tracking-[-0.02em] text-on-surface sm:text-4xl">
-            Five projects, five problem spaces.
+            Six projects, six problem spaces.
           </h2>
         </Reveal>
 
