@@ -100,6 +100,18 @@ export function ProjectCard({ project }: { project: Project }) {
                 <ArrowUpRight size={14} strokeWidth={2} />
               </a>
             )}
+
+            {project.tertiaryLink && (
+              <a
+                href={project.tertiaryLink}
+                target={project.tertiaryLink !== "#" ? "_blank" : undefined}
+                rel={project.tertiaryLink !== "#" ? "noreferrer" : undefined}
+                className="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-[0.08em] text-primary transition-colors hover:text-primary-container"
+              >
+                {project.tertiaryLinkLabel}
+                <ArrowUpRight size={14} strokeWidth={2} />
+              </a>
+            )}
           </div>
         </div>
       </article>

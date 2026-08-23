@@ -16,6 +16,8 @@ export type Project = {
   linkLabel: "GitHub Repo" | "Video" | "Live Demo";
   secondaryLink?: string;
   secondaryLinkLabel?: "GitHub Repo" | "Video" | "Live Demo";
+  tertiaryLink?: string;
+  tertiaryLinkLabel?: "GitHub Repo" | "Video" | "Live Demo";
   image: string;
   imageAlt: string;
   layout: "split-right" | "split-left" | "feature";
@@ -114,6 +116,8 @@ export const projects: Project[] = [
     linkLabel: "Live Demo",
     secondaryLink: "https://github.com/Minz516/count-down",
     secondaryLinkLabel: "GitHub Repo",
+    tertiaryLink: "https://youtu.be/T4otm38ROwQ?si=kzFOE7pgAIhAFpvR",
+    tertiaryLinkLabel: "Video",
     image: "/projects/countdown.png",
     imageAlt: "Countdown app dashboard showing a live event countdown timer and a timeline of upcoming deadlines",
     layout: "split-right",

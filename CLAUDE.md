@@ -19,6 +19,7 @@ There is no test suite. Verification for changes is: `npm run build` succeeds, `
 
 ## Architecture
 
+- **Path alias**: `@/*` maps to the repo root (`tsconfig.json`) — import as `@/components/...`, `@/data/...`, not relative paths.
 - **Content/presentation split**: every section component (`components/*.tsx`) reads from a matching typed data file in `data/` (`data/site.ts`, `data/projects.ts`, `data/skills.ts`, `data/honors.ts`, `data/certificates.ts`). To change copy, dates, links, or add a project/skill/honor/certificate, edit the data file — don't hardcode content into a component. `data/site.ts` also holds `navLinks`, which drives both the nav and the section anchors (`#about`, `#skills`, etc.) — the two are kept in sync.
 - **No `tailwind.config.ts`**: this project uses Tailwind v4's CSS-first config. All design tokens (colors, fonts, radii) are defined as CSS custom properties in `app/globals.css` under `@theme`, then referenced as ordinary Tailwind utility classes (e.g. `--color-primary` → `text-primary`, `bg-primary`). Add new tokens there, not in a config file.
 - **Fonts** are loaded once in `app/layout.tsx` via `next/font/google` (Lexend, Inter, JetBrains Mono) and exposed as CSS variables (`--font-lexend`, etc.) consumed by the `--font-display` / `--font-sans` / `--font-mono` theme tokens in `globals.css`.
