@@ -13,6 +13,14 @@ export type Certificate = {
 
 export const certificates: Certificate[] = [
   {
+    title: "Grab The Future Hackathon 2026 - Certificate of Participation",
+    issuer: "Grab Viet Nam & UNDP Viet Nam",
+    date: "2026",
+    image: "/certificates/grab-the-future-hackathon.png",
+    imageAlt: "Certificate of Participation in the Grab the Future Hackathon 2026, co-hosted by UNDP Vietnam and Grab Viet Nam, awarded to Tran Hoang Minh",
+    aspect: "3750/2651",
+  },
+  {
     title: "BIG-O Blue: Algorithms & Interview Patterns",
     issuer: "Big-O Coding",
     date: "May 2026",

@@ -6,6 +6,7 @@
 export type Project = {
   slug: string;
   title: string;
+  category: "Personal Project" | "Club Project" | "Competition Project";
   role: string;
   date: string;
   description: string;
@@ -27,6 +28,7 @@ export const projects: Project[] = [
   {
     slug: "eventx",
     title: "EventX",
+    category: "Club Project",
     role: "Backend Specialist",
     date: "Dec 2025",
     description:
@@ -44,6 +46,7 @@ export const projects: Project[] = [
   {
     slug: "railway-management-system",
     title: "Railway Management System",
+    category: "Club Project",
     role: "Database & Application Developer",
     date: "Dec 2025",
     description:
@@ -59,6 +62,7 @@ export const projects: Project[] = [
   {
     slug: "flowguard",
     title: "FlowGuard",
+    category: "Competition Project",
     role: "Lead Developer",
     date: "2025",
     description:
@@ -77,6 +81,7 @@ export const projects: Project[] = [
   {
     slug: "floppy-bird",
     title: "Floppy Bird",
+    category: "Club Project",
     role: "Solo Developer",
     date: "2026",
     description:
@@ -91,6 +96,7 @@ export const projects: Project[] = [
   {
     slug: "tictactoang",
     title: "TicTacToang",
+    category: "Club Project",
     role: "Fullstack Developer",
     date: "2026",
     description:
@@ -107,6 +113,7 @@ export const projects: Project[] = [
   {
     slug: "countdown",
     title: "Countdown",
+    category: "Personal Project",
     role: "Solo Fullstack Developer",
     date: "2026",
     description:

@@ -40,6 +40,8 @@ export function ProjectCard({ project }: { project: Project }) {
               isFeature ? "justify-center" : ""
             }`}
           >
+            <span>{project.category}</span>
+            <span aria-hidden="true">&middot;</span>
             <span>{project.role}</span>
             <span aria-hidden="true">&middot;</span>
             <span>{project.date}</span>
