@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Lexend, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -59,6 +59,10 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  themeColor: "#131313",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -69,7 +73,15 @@ export default function RootLayout({
       lang="en"
       className={`${lexend.variable} ${inter.variable} ${jetbrainsMono.variable}`}
     >
-      <body className="font-sans antialiased">{children}</body>
+      <body className="font-sans antialiased">
+        <a
+          href="#main-content"
+          className="sr-only focus-visible:not-sr-only focus-visible:fixed focus-visible:left-4 focus-visible:top-4 focus-visible:z-[60] focus-visible:rounded focus-visible:bg-primary focus-visible:px-4 focus-visible:py-2 focus-visible:font-mono focus-visible:text-xs focus-visible:uppercase focus-visible:tracking-[0.1em] focus-visible:text-on-primary"
+        >
+          Skip to main content
+        </a>
+        {children}
+      </body>
     </html>
   );
 }

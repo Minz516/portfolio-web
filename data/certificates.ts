@@ -13,6 +13,14 @@ export type Certificate = {
 
 export const certificates: Certificate[] = [
   {
+    title: "ADC Hackathon 2026 - Certificate of Participation",
+    issuer: "RMIT University Vietnam, Careers, Alumni & Industry Relations",
+    date: "Sep 2026",
+    image: "/certificates/adc-hackathon.png",
+    imageAlt: "Certificate of Participation in the ADC Hackathon 2026 at RMIT University Vietnam, awarded to Tran Hoang Minh, Team: Aquaholics in Paris",
+    aspect: "1320/925",
+  },
+  {
     title: "Grab The Future Hackathon 2026 - Certificate of Participation",
     issuer: "Grab Viet Nam & UNDP Viet Nam",
     date: "2026",

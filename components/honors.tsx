@@ -5,10 +5,10 @@ import { Reveal } from "@/components/reveal";
 
 export function Honors() {
   return (
-    <section id="honors" className="border-t border-outline-variant/30 pt-20 lg:pt-40">
+    <section id="honors" className="scroll-mt-24 border-t border-outline-variant/30 pt-20 lg:pt-40">
       <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
         <Reveal>
-          <h2 className="font-display text-3xl font-semibold tracking-[-0.02em] text-on-surface sm:text-4xl">
+          <h2 className="text-balance font-display text-3xl font-semibold tracking-[-0.02em] text-on-surface sm:text-4xl">
             Honors & Awards
           </h2>
         </Reveal>
@@ -26,7 +26,7 @@ export function Honors() {
                   honor.featured ? "bg-tertiary" : "bg-primary"
                 }`}
               >
-                {honor.featured && <Trophy size={9} strokeWidth={2.5} className="text-bg-lowest" />}
+                {honor.featured && <Trophy aria-hidden="true" size={9} strokeWidth={2.5} className="text-bg-lowest" />}
               </span>
 
               <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">

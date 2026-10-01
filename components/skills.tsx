@@ -73,10 +73,10 @@ const spanClass: Record<SkillCategory["span"], string> = {
 
 export function Skills() {
   return (
-    <section id="skills" className="border-t border-outline-variant/30 pt-20 lg:pt-40">
+    <section id="skills" className="scroll-mt-24 border-t border-outline-variant/30 pt-20 lg:pt-40">
       <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
         <Reveal>
-          <h2 className="font-display text-3xl font-semibold tracking-[-0.02em] text-on-surface sm:text-4xl">
+          <h2 className="text-balance font-display text-3xl font-semibold tracking-[-0.02em] text-on-surface sm:text-4xl">
             Skills
           </h2>
         </Reveal>
@@ -91,7 +91,7 @@ export function Skills() {
                 className={spanClass[category.span]}
               >
                 <div className="h-full rounded-lg border border-outline-variant/50 bg-surface-low p-6 transition-colors hover:border-primary/40">
-                  <Icon className="text-primary" size={22} strokeWidth={1.75} />
+                  <Icon aria-hidden="true" className="text-primary" size={22} strokeWidth={1.75} />
                   <h3 className="mt-4 font-display text-base font-medium text-on-surface">
                     {category.title}
                   </h3>
@@ -103,7 +103,7 @@ export function Skills() {
                           key={item}
                           className="flex items-center gap-1.5 rounded bg-surface-high px-2.5 py-1 font-mono text-[11px] uppercase tracking-[0.08em] text-secondary"
                         >
-                          {TechIcon && <TechIcon className="shrink-0" size={12} />}
+                          {TechIcon && <TechIcon aria-hidden="true" className="shrink-0" size={12} />}
                           {item}
                         </li>
                       );

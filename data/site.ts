@@ -10,7 +10,7 @@ export const site = {
   heroSubtext:
     "Software Engineering student at RMIT building a foundation in OOP and algorithms.",
   aboutParagraphs: [
-    "I believes technology is the catalyst for turning the impossible into reality. The current focus is building a robust technical foundation through Object-Oriented Programming and complex algorithms, with a growth mindset that stays eager for new technical challenges.",
+    "I believe technology is the catalyst for turning the impossible into reality. The current focus is building a robust technical foundation through Object-Oriented Programming and complex algorithms, with a growth mindset that stays eager for new technical challenges.",
     "The long-term vision reaches further: researching and developing AR/VR and immersive technologies that bridge the gap between virtual experiences and the physical world.",
   ],
   location: "Ho Chi Minh City, Vietnam",

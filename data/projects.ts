@@ -53,11 +53,11 @@ export const projects: Project[] = [
       "Relational database architected from scratch with sample data via Oracle APEX. End-to-end passenger booking flow with real-time trip search, a dynamic visual seat mapper, and instant booking history, plus an admin suite with real-time fleet monitoring and revenue dashboards.",
     result: "Highest score in the course (80/100)",
     tags: ["Oracle APEX", "SQL", "Database Design"],
-    link: "#",
+    link: "https://youtu.be/UtmZ8a5-d_4?si=bvnTQmqmt_xmP2D8",
     linkLabel: "Video",
     image: "/projects/railway-management.png",
     imageAlt: "Railway Reservation Management System showing a searchable list of scheduled train trips",
-    layout: "split-left",
+    layout: "feature",
   },
   {
     slug: "flowguard",
@@ -76,7 +76,7 @@ export const projects: Project[] = [
     secondaryLinkLabel: "GitHub Repo",
     image: "/projects/flowguard.png",
     imageAlt: "FlowGuard mobile app mockups showing flood risk alerts overlaid on flooded street photography",
-    layout: "feature",
+    layout: "split-left",
   },
   {
     slug: "floppy-bird",
@@ -108,7 +108,7 @@ export const projects: Project[] = [
     secondaryLinkLabel: "Live Demo",
     image: "/projects/tictactoang.png",
     imageAlt: "TicTacToang landing page showing the game arena hero, board size and AI difficulty features, and a live match visualizer",
-    layout: "split-left",
+    layout: "feature",
   },
   {
     slug: "countdown",

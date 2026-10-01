@@ -12,7 +12,7 @@ export function ProjectVisual({ project }: { project: Project }) {
         alt={project.imageAlt}
         fill
         sizes="(min-width: 1024px) 50vw, 100vw"
-        className="project-thumb object-cover object-top transition-all duration-500"
+        className="project-thumb object-cover object-top transition-[filter] duration-500"
       />
 
       <div

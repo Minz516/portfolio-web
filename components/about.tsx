@@ -5,7 +5,7 @@ import { Reveal } from "@/components/reveal";
 
 export function About() {
   return (
-    <section id="about" className="border-t border-outline-variant/30 pt-20 lg:pt-40">
+    <section id="about" className="scroll-mt-24 border-t border-outline-variant/30 pt-20 lg:pt-40">
       <div className="mx-auto grid max-w-[1280px] grid-cols-1 gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-10 lg:px-8">
         <Reveal className="lg:col-span-5">
           <div className="relative aspect-[3/4] w-full max-w-sm overflow-hidden rounded-lg border border-outline-variant/50 bg-surface-low lg:max-w-none">
@@ -15,14 +15,13 @@ export function About() {
               fill
               sizes="(min-width: 1024px) 40vw, 90vw"
               className="object-cover"
-              priority
             />
           </div>
         </Reveal>
 
         <div className="lg:col-span-7">
           <Reveal>
-            <h2 className="font-display text-3xl font-semibold tracking-[-0.02em] text-on-surface sm:text-4xl">
+            <h2 className="text-balance font-display text-3xl font-semibold tracking-[-0.02em] text-on-surface sm:text-4xl">
               About
             </h2>
             <div className="mt-6 space-y-5">
@@ -38,7 +37,7 @@ export function About() {
             <div className="rounded-lg border border-outline-variant/50 bg-surface-low p-6 sm:p-8">
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
                 <div className="flex items-start gap-3">
-                  <GraduationCap className="mt-1 shrink-0 text-primary" size={20} strokeWidth={1.75} />
+                  <GraduationCap aria-hidden="true" className="mt-1 shrink-0 text-primary" size={20} strokeWidth={1.75} />
                   <div>
                     <p className="font-mono text-xs uppercase tracking-[0.1em] text-secondary">
                       Education
@@ -54,7 +53,7 @@ export function About() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <LanguagesIcon className="mt-1 shrink-0 text-primary" size={20} strokeWidth={1.75} />
+                  <LanguagesIcon aria-hidden="true" className="mt-1 shrink-0 text-primary" size={20} strokeWidth={1.75} />
                   <div>
                     <p className="font-mono text-xs uppercase tracking-[0.1em] text-secondary">
                       Languages
@@ -71,7 +70,7 @@ export function About() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <MapPin className="mt-1 shrink-0 text-primary" size={20} strokeWidth={1.75} />
+                  <MapPin aria-hidden="true" className="mt-1 shrink-0 text-primary" size={20} strokeWidth={1.75} />
                   <div>
                     <p className="font-mono text-xs uppercase tracking-[0.1em] text-secondary">
                       Location

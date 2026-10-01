@@ -4,10 +4,10 @@ import { Reveal } from "@/components/reveal";
 
 export function Certificates() {
   return (
-    <section id="certificates" className="border-t border-outline-variant/30 pt-20 lg:pt-40">
+    <section id="certificates" className="scroll-mt-24 border-t border-outline-variant/30 pt-20 lg:pt-40">
       <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
         <Reveal>
-          <h2 className="font-display text-3xl font-semibold tracking-[-0.02em] text-on-surface sm:text-4xl">
+          <h2 className="text-balance font-display text-3xl font-semibold tracking-[-0.02em] text-on-surface sm:text-4xl">
             Certificates
           </h2>
         </Reveal>

@@ -35,16 +35,13 @@ export function ProjectCard({ project }: { project: Project }) {
                 : "order-2 lg:order-1"
           }
         >
-          <div
-            className={`flex flex-wrap items-center gap-2 font-mono text-xs uppercase tracking-[0.08em] text-on-surface-variant ${
-              isFeature ? "justify-center" : ""
-            }`}
-          >
-            <span>{project.category}</span>
-            <span aria-hidden="true">&middot;</span>
-            <span>{project.role}</span>
-            <span aria-hidden="true">&middot;</span>
-            <span>{project.date}</span>
+          <div className={isFeature ? "flex flex-col items-center gap-1.5" : "flex flex-col gap-1.5"}>
+            <span className="font-mono text-xs uppercase tracking-[0.08em] text-secondary">
+              {project.category}
+            </span>
+            <span className="font-mono text-xs uppercase tracking-[0.08em] text-on-surface-variant">
+              {project.role} &middot; {project.date}
+            </span>
           </div>
 
           <h3 className="mt-3 font-display text-2xl font-semibold tracking-[-0.01em] text-on-surface sm:text-3xl">
@@ -81,37 +78,46 @@ export function ProjectCard({ project }: { project: Project }) {
               isFeature ? "justify-center" : ""
             }`}
           >
-            <a
-              href={project.link}
-              target={project.link !== "#" ? "_blank" : undefined}
-              rel={project.link !== "#" ? "noreferrer" : undefined}
-              className="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-[0.08em] text-primary transition-colors hover:text-primary-container"
-            >
-              {project.linkLabel}
-              <ArrowUpRight size={14} strokeWidth={2} />
-            </a>
+            {project.link === "#" ? (
+              <span
+                aria-disabled="true"
+                className="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-[0.08em] text-on-surface-variant/50"
+              >
+                {project.linkLabel} coming soon
+              </span>
+            ) : (
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-[0.08em] text-primary transition-colors hover:text-primary-container"
+              >
+                {project.linkLabel}
+                <ArrowUpRight size={14} strokeWidth={2} aria-hidden="true" />
+              </a>
+            )}
 
             {project.secondaryLink && (
               <a
                 href={project.secondaryLink}
-                target={project.secondaryLink !== "#" ? "_blank" : undefined}
-                rel={project.secondaryLink !== "#" ? "noreferrer" : undefined}
+                target="_blank"
+                rel="noreferrer"
                 className="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-[0.08em] text-primary transition-colors hover:text-primary-container"
               >
                 {project.secondaryLinkLabel}
-                <ArrowUpRight size={14} strokeWidth={2} />
+                <ArrowUpRight size={14} strokeWidth={2} aria-hidden="true" />
               </a>
             )}
 
             {project.tertiaryLink && (
               <a
                 href={project.tertiaryLink}
-                target={project.tertiaryLink !== "#" ? "_blank" : undefined}
-                rel={project.tertiaryLink !== "#" ? "noreferrer" : undefined}
+                target="_blank"
+                rel="noreferrer"
                 className="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-[0.08em] text-primary transition-colors hover:text-primary-container"
               >
                 {project.tertiaryLinkLabel}
-                <ArrowUpRight size={14} strokeWidth={2} />
+                <ArrowUpRight size={14} strokeWidth={2} aria-hidden="true" />
               </a>
             )}
           </div>
