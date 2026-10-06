@@ -82,7 +82,7 @@ export const projects: Project[] = [
     slug: "floppy-bird",
     title: "Floppy Bird",
     category: "Club Project",
-    role: "Solo Developer",
+    role: "UI/UX Designer & Frontend Developer",
     date: "2026",
     description:
       "A gesture-controlled reimagining of Flappy Bird, built with Python and Pygame. Real-time arm-tracking via webcam replaces the keyboard, using computer vision to read the player's arm position and translate physical movement directly into the bird's flight.",
